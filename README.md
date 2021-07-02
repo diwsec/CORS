@@ -1,6 +1,6 @@
 # CORS poc
 
-you cant create a website for submitting a cors poc, this html script will help you!
+you cant create a website for submitting a cors poc for a bug report, this html script will help you!
 
 # usage
 
