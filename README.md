@@ -6,7 +6,7 @@ you cant create a website just for submitting a cors poc for a bug report, this 
 
 open cors.html in your broswer
 
-# evertthing you need to know about CORS
+# everything you need to know about CORS
 
 ![IMG_20210702_133115](https://user-images.githubusercontent.com/83821864/124244349-7b6a0b00-db3c-11eb-88d3-bf53483e6331.jpg)
 
